@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo \# Answers
+echo "\# [Answers](https://adventofcode.com)"
 for year in */
 do
     year=`basename $year`
