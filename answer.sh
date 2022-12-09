@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo \# Answers
-for year in basename */
+for year in */
 do
     year=`basename $year`
     echo \#\# $year
