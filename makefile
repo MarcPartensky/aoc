@@ -1,2 +1,2 @@
 answer:
-	./answer.sh
+	./answer.sh > README.md
