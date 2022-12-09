@@ -1,7 +1,13 @@
 #!/bin/sh
 
 echo \# Answers
-for date in */*
+for year in basename */
 do
-    echo - $date: `cat $date/input | python $date`
+    year=`basename $year`
+    echo \#\# $year
+    for day in $year/*/
+    do
+        day=`basename $day`
+        echo - $day: `cat $year/$day/input | python $year/$day`
+    done
 done
