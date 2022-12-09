@@ -9,6 +9,6 @@ do
     do
         day=`basename $day`
         number=`echo $day | cut --characters=4-`
-        echo - "[$day](https://adventofcode.com/$year/day/$number)": **`cat $year/$day/input | python $year/$day`**
+        echo - "[$day](https://adventofcode.com/$year/day/$number)": **`cat $year/$day/input | python $year/$day`** "[solution](https://github.com/MarcPartensky/aoc/blob/master/$year/$day/__main__.py)"
     done
 done
