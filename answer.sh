@@ -8,6 +8,6 @@ do
     for day in $year/*/
     do
         day=`basename $day`
-        echo - [$day](https://adventofcode/$year/$day): **`cat $year/$day/input | python $year/$day`**
+        echo - "[$day](https://adventofcode/$year/$day)": **`cat $year/$day/input | python $year/$day`**
     done
 done
