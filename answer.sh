@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "\# [Answers](https://adventofcode.com)"
+echo \# Answers
 for year in */
 do
     year=`basename $year`
@@ -8,6 +8,6 @@ do
     for day in $year/*/
     do
         day=`basename $day`
-        echo - $day: **`cat $year/$day/input | python $year/$day`**
+        echo - [$day](https://adventofcode/$year/$day): **`cat $year/$day/input | python $year/$day`**
     done
 done
