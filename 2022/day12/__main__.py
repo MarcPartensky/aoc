@@ -47,17 +47,17 @@ def bfs():
                     yt = y+yi
 
                     if 0<=xt<w and 0<=yt<h: # check if in grid
-                        if visited[yt][xt]:
-                            continue
-                        if grid[yt][xt] <= height + 1: # check if too high
-                            continue
-
-                        if (xt, yt) == (xe, ye): # check if answer found
-                            return steps
-                        
-                        # next neighbor found
-                        visited[yt][xt] = 1
-                        next_neighbors.append((xt, yt)) 
+                        continue
+                    if visited[yt][xt]: # check if visited
+                        continue
+                    if grid[yt][xt] > height + 1: # check if too high
+                        continue
+                    if (xt, yt) == (xe, ye): # check if answer found
+                        return steps
+                    
+                    # next neighbor found
+                    visited[yt][xt] = 1
+                    next_neighbors.append((xt, yt)) 
 
         neighbors = next_neighbors
 
