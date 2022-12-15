@@ -46,7 +46,7 @@ def bfs():
                     xt = x+xi
                     yt = y+yi
 
-                    if 0<=xt<w and 0<=yt<h: # check if in grid
+                    if not (0<=xt<w and 0<=yt<h): # check if in grid
                         continue
                     if visited[yt][xt]: # check if visited
                         continue
