@@ -10,7 +10,7 @@ for y,l in enumerate(m.split()):
     for x,letter in enumerate(l):
         if letter == "S":
             letter = "a"
-            xp, yp = x, y
+            xs, ys = x, y
         elif letter == "E":
             letter = "z"
             xe, ye = x, y
@@ -23,12 +23,15 @@ h = len(grid)
 
 
 def bfs():
+    # create list of visited cells
     visited = []
     for _ in range(h):
         visited.append([0]*w)
 
-    visited[yp][xp] = 1
-    neighbors = [(xp, yp)]
+    # S is visited
+    visited[ys][xs] = 1
+    neighbors = [(xs, ys)]
+
     steps = 0
     while True:
         steps += 1
