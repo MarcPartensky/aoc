@@ -42,7 +42,6 @@ def bfs(start, end, part2=False):
 
         # use old neighbors
         for (x, y) in neighbors:
-            height = grid[y][x]
 
             # to iterate over next potential neighbors
             for xi, yi in [(-1, 0), (1, 0), (0, 1), (0, -1)]:
@@ -53,7 +52,7 @@ def bfs(start, end, part2=False):
                         continue
                     if visited[yt][xt]: # check if visited
                         continue
-                    if grid[yt][xt] > height + 1: # check if too high
+                    if abs(grid[y][x] - grid[yt][xt]) > 1: # check if too high or low
                         continue
                     if grid[yt][xt] == 0 and part2:
                         return steps
